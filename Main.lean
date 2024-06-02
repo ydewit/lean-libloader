@@ -1,4 +1,5 @@
 import «Libloader»
 
-def main : IO Unit :=
-  IO.println s!"Hello, {hello}!"
+def main : IO Unit := do
+  let a ← loadLibrary "libhello.so"
+  IO.println s!"Hello!"
